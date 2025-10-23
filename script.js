@@ -211,8 +211,8 @@ function typeEffect() {
 // subtitle.textContent = '';
 // setTimeout(typeEffect, 1000);
 
-// Add cursor pointer to project cards
-document.querySelectorAll('.project-card').forEach(card => {
+// Add cursor pointer to project cards (excluding fullstack cards with carousel)
+document.querySelectorAll('.project-card:not(.fullstack-card)').forEach(card => {
     card.style.cursor = 'pointer';
 
     card.addEventListener('click', (e) => {
@@ -220,6 +220,105 @@ document.querySelectorAll('.project-card').forEach(card => {
             const link = card.querySelector('.project-link');
             if (link) {
                 link.click();
+            }
+        }
+    });
+});
+
+// Carousel functionality for Full-Stack Projects
+document.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.project-carousel');
+
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        const indicatorsContainer = carousel.querySelector('.carousel-indicators');
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        // Create indicators
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('carousel-indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        const indicators = carousel.querySelectorAll('.carousel-indicator');
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+
+            indicators.forEach((indicator, index) => {
+                indicator.classList.remove('active');
+                if (index === currentSlide) {
+                    indicator.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlides();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlides();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlides();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-play carousel (optional - uncomment to enable)
+        // let autoplayInterval = setInterval(nextSlide, 4000);
+
+        // Pause autoplay on hover (if autoplay is enabled)
+        // carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+        // carousel.addEventListener('mouseleave', () => {
+        //     autoplayInterval = setInterval(nextSlide, 4000);
+        // });
+
+        // Keyboard navigation
+        carousel.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchStartX - touchEndX > swipeThreshold) {
+                nextSlide(); // Swipe left
+            }
+            if (touchEndX - touchStartX > swipeThreshold) {
+                prevSlide(); // Swipe right
             }
         }
     });
