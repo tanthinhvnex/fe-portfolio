@@ -1,177 +1,231 @@
-# Portfolio - Lâm Tấn Thịnh
+# Portfolio - Lam Tan Thinh
 
-Portfolio website chuyên nghiệp cho HTML Banner Designer & Front-End Developer.
+Modern dark-themed portfolio website showcasing front-end development and HTML banner design projects.
 
-## Thông tin
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-**Tên:** Lâm Tấn Thịnh
-**Chuyên môn:** HTML Banner Design, Front-End Development
-**Học vấn:** Khoa Học Máy Tính (2021-2025) - Đại Học Bách Khoa Hồ Chí Minh
+## 👨‍💻 About
 
-## Tính năng
+**Name:** Lam Tan Thinh
+**Role:** HTML Banner Designer & Front-End Developer
+**Education:** Computer Science (2021-2025) - Ho Chi Minh City University of Technology
+**Email:** tanthinhvnex@gmail.com
+**GitHub:** [@tanthinhvnex](https://github.com/tanthinhvnex)
 
-- ✅ Responsive design (mobile-friendly)
-- ✅ Modern UI/UX với gradient effects
-- ✅ Smooth scroll navigation
-- ✅ Animated cards và transitions
-- ✅ Project showcase với hover effects
-- ✅ Skills section với icons
-- ✅ Contact form
-- ✅ Mobile hamburger menu
+## ✨ Features
 
-## Cấu trúc file
+### Design & UX
+- 🌙 **Dark Mode Theme** - Sleek dark interface with pastel blue accents
+- 🎨 **Animated Hero Banner** - Gradient orbs, floating shapes, morphing blobs, and particle effects
+- 💫 **Smooth Animations** - Fade-in effects, hover transitions, and scroll animations
+- 📱 **Fully Responsive** - Mobile-first design with hamburger menu
+
+### Technical Features
+- ⚡ **Live Project Previews** - Embedded iframes showing real GitHub Pages
+- 🔗 **Direct Links** - Live Demo and GitHub repository buttons for each project
+- 🎯 **Performance Optimized** - Lazy loading iframes, CSS animations with GPU acceleration
+- 🎭 **Interactive Elements** - Hover effects, smooth scrolling, active link highlighting
+
+## 📁 Project Structure
 
 ```
-tanthinhvnex.github.io/
-├── index.html          # Trang chủ
-├── styles.css          # Styles chính
-├── script.js           # JavaScript interactions
-└── README.md           # Hướng dẫn này
+fe-portfolio/
+├── index.html          # Main HTML file
+├── styles.css          # All styles (dark theme, animations, responsive)
+├── script.js           # JavaScript (particles, navigation, interactions)
+├── images/             # Project screenshots (optional)
+│   └── README.md       # Screenshot guide
+└── README.md           # This file
 ```
 
-## Cách sử dụng
-
-### 1. Deploy lên GitHub Pages
-
-1. Đảm bảo repository có tên: `tanthinhvnex.github.io`
-2. Push tất cả files lên GitHub:
-```bash
-git add .
-git commit -m "Initial portfolio commit"
-git push origin main
-```
-
-3. Vào Settings > Pages
-4. Source: chọn branch `main` và folder `/ (root)`
-5. Save và đợi vài phút
-6. Website sẽ có tại: `https://tanthinhvnex.github.io`
-
-### 2. Cập nhật thông tin cá nhân
-
-Mở `index.html` và chỉnh sửa:
-
-**Email & GitHub:**
-```html
-<!-- Dòng ~274 -->
-<span>your.email@example.com</span>
-
-<!-- Dòng ~278 -->
-<a href="https://github.com/tanthinhvnex" target="_blank">github.com/tanthinhvnex</a>
-```
-
-### 3. Thêm link projects
-
-Thay thế các link placeholder bằng link thực tế của bạn:
-
-```html
-<!-- Tìm các thẻ <a> trong .project-overlay -->
-<a href="#" class="project-link" target="_blank">
-<!-- Thay "#" bằng link GitHub Pages hoặc demo của project -->
-<a href="https://tanthinhvnex.github.io/your-project" class="project-link" target="_blank">
-```
-
-### 4. Thêm screenshots projects
-
-1. Tạo folder `images/` trong repository
-2. Thêm screenshots (khuyến nghị 600x400px)
-3. Cập nhật src trong `index.html`:
-
-```html
-<!-- Thay placeholder bằng ảnh thật -->
-<img src="images/project1.png" alt="Web Project 1">
-```
-
-### 5. Tùy chỉnh màu sắc
-
-Mở `styles.css` và chỉnh sửa biến CSS (dòng 9-18):
+## 🎨 Color Scheme
 
 ```css
-:root {
-    --primary-color: #667eea;      /* Màu chính */
-    --secondary-color: #764ba2;    /* Màu phụ */
-    --accent-color: #f093fb;       /* Màu nhấn */
-    /* ... */
-}
+/* Pastel Blue Theme */
+--primary-color: #60a5fa;     /* Light Blue */
+--secondary-color: #3b82f6;   /* Medium Blue */
+--accent-color: #93c5fd;      /* Pastel Blue */
+
+/* Dark Background */
+--bg-color: #0a0a0f;          /* Deep Black */
+--bg-light: #18181b;          /* Dark Gray */
+--bg-card: #1c1c21;           /* Card Background */
 ```
 
-## Các section chính
+## 🚀 Featured Projects
 
-1. **Hero Section** - Trang chủ với tên và mô tả
-2. **About** - Giới thiệu bản thân, học vấn, thống kê
-3. **Projects** - Showcase 2 web apps + 4 landing pages
-4. **Skills** - HTML5, CSS3, JavaScript, PHP, Responsive Design, Banner Design
-5. **Contact** - Form liên hệ và thông tin
+### Landing Pages (4 projects)
+1. **Real Estate Landing Page** - [Live](https://tanthinhvnex.github.io/landing-page-real-estate/) | [Code](https://github.com/tanthinhvnex/landing-page-real-estate)
+2. **Online Courses Landing Page** - [Live](https://tanthinhvnex.github.io/online-courses-landing-page/) | [Code](https://github.com/tanthinhvnex/online-courses-landing-page)
+3. **Dental Clinic Landing Page** - [Live](https://tanthinhvnex.github.io/dental-clinic-landing-page/) | [Code](https://github.com/tanthinhvnex/dental-clinic-landing-page)
+4. **Pet Care Service Landing Page** - [Live](https://tanthinhvnex.github.io/pet-care-service-landing-page/) | [Code](https://github.com/tanthinhvnex/pet-care-service-landing-page)
 
-## Checklist hoàn thiện portfolio
+### Full-Stack Web Applications (Coming Soon)
+- Web Application 1
+- Web Application 2
 
-- [ ] Cập nhật email cá nhân
-- [ ] Kiểm tra link GitHub profile
-- [ ] Thêm link demo cho 2 web projects
-- [ ] Thêm link demo cho 4 landing pages
-- [ ] Upload screenshots cho tất cả projects
-- [ ] Thêm social media links (LinkedIn, Facebook nếu có)
-- [ ] Test responsive trên mobile/tablet
-- [ ] Test form liên hệ
-- [ ] Kiểm tra tất cả links hoạt động
+## 🛠️ Technologies Used
 
-## Tips để tối ưu portfolio
+- **HTML5** - Semantic markup
+- **CSS3** - Grid, Flexbox, Animations, Custom Properties
+- **JavaScript (ES6+)** - Canvas API, Intersection Observer, DOM Manipulation
+- **Font Awesome 6.4.0** - Icons
+- **GitHub Pages** - Hosting
 
-1. **Screenshots chất lượng cao:** Chụp ảnh projects ở resolution tốt
-2. **Mô tả rõ ràng:** Viết mô tả chi tiết cho mỗi project
-3. **Live demos:** Deploy tất cả projects lên GitHub Pages để có link demo
-4. **Testimonials:** Nếu có feedback từ clients, thêm vào section riêng
-5. **Blog (tùy chọn):** Có thể thêm section blog về web development
-6. **Analytics:** Thêm Google Analytics để theo dõi visitors
+## 📦 Installation & Setup
 
-## Customization nâng cao
+### Local Development
 
-### Thêm project mới:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/tanthinhvnex/fe-portfolio.git
+   cd fe-portfolio
+   ```
 
-Copy một `.project-card` và paste, sau đó chỉnh sửa:
+2. **Open in browser**
+   ```bash
+   # Simply open index.html in your browser
+   # Or use Live Server extension in VS Code
+   ```
+
+### Deploy to GitHub Pages
+
+1. **Create a new repository** named `[username].github.io`
+
+2. **Push your code**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit: Portfolio website"
+   git branch -M main
+   git remote add origin https://github.com/tanthinhvnex/tanthinhvnex.github.io.git
+   git push -u origin main
+   ```
+
+3. **Enable GitHub Pages**
+   - Go to Settings → Pages
+   - Source: `main` branch, `/ (root)` folder
+   - Save and wait 2-3 minutes
+   - Visit: `https://[username].github.io`
+
+## ⚙️ Customization Guide
+
+### Update Personal Information
+
+**Contact Details** (index.html line ~291-299):
+```html
+<a href="mailto:your.email@example.com">your.email@example.com</a>
+<a href="tel:+84867177379">0867 177 379</a>
+<a href="https://github.com/yourusername">github.com/yourusername</a>
+<a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a>
+```
+
+### Add New Project
+
 ```html
 <div class="project-card">
     <div class="project-image">
-        <img src="images/new-project.png" alt="New Project">
+        <iframe
+            src="https://yourusername.github.io/project-name/"
+            frameborder="0"
+            scrolling="no"
+            loading="lazy"
+            title="Project Preview"></iframe>
         <div class="project-overlay">
-            <a href="https://demo-link.com" class="project-link" target="_blank">
+            <a href="https://yourusername.github.io/project-name/" class="project-link" target="_blank">
                 <i class="fas fa-external-link-alt"></i>
             </a>
         </div>
     </div>
     <div class="project-info">
         <h4>Project Name</h4>
-        <p>Project description...</p>
-        <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
+        <p>Project description here...</p>
+        <div class="project-links">
+            <a href="https://yourusername.github.io/project-name/" target="_blank" class="project-btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/yourusername/project-name" target="_blank" class="project-btn project-btn-github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
         </div>
     </div>
 </div>
 ```
 
-### Thêm skill mới:
+### Customize Colors
 
-```html
-<div class="skill-card">
-    <div class="skill-icon">
-        <i class="fab fa-react"></i> <!-- Font Awesome icon -->
-    </div>
-    <h4>Skill Name</h4>
-    <p>Skill description</p>
-</div>
+Edit CSS variables in `styles.css`:
+```css
+:root {
+    --primary-color: #60a5fa;      /* Change to your brand color */
+    --secondary-color: #3b82f6;
+    --accent-color: #93c5fd;
+}
 ```
 
-## Hỗ trợ
+## 🎯 Performance Features
 
-Nếu cần thêm tính năng hoặc có vấn đề, hãy:
-1. Check documentation: https://docs.github.com/pages
-2. Font Awesome icons: https://fontawesome.com/icons
-3. Gradient generator: https://cssgradient.io/
+- **Lazy Loading** - iframes load only when scrolled into view
+- **CSS Animations** - Hardware-accelerated with `transform` and `opacity`
+- **Particle System** - Canvas-based with optimized rendering
+- **Responsive Images** - Proper sizing for different devices
 
-## License
+## 📱 Responsive Breakpoints
 
-Free to use for personal portfolio.
+```css
+/* Mobile */
+@media (max-width: 480px) { }
+
+/* Tablet */
+@media (max-width: 768px) { }
+
+/* Desktop */
+Default styles
+```
+
+## 🎭 Animation Effects
+
+### Hero Banner
+- Gradient Orbs (3 layers)
+- Floating Shapes
+- Morphing Blob
+- Particle Network (Canvas)
+- Animated Title Gradient
+
+### Interactions
+- Hover scale on project cards
+- Smooth scroll navigation
+- Fade-in on scroll (Intersection Observer)
+- Active link highlighting
+
+## 📝 To-Do List
+
+- [ ] Add 2 Full-Stack Web Application projects
+- [ ] Implement dark/light mode toggle (optional)
+- [ ] Add project screenshots as fallback for iframes
+- [ ] Integrate contact form with backend (EmailJS/Formspre)
+- [ ] Add Google Analytics
+- [ ] Create blog section
+- [ ] Add testimonials section
+
+## 🤝 Contributing
+
+This is a personal portfolio, but feel free to fork and customize for your own use!
+
+## 📄 License
+
+MIT License - Free to use for personal portfolios
+
+## 🔗 Links
+
+- **Portfolio:** https://tanthinhvnex.github.io
+- **GitHub:** https://github.com/tanthinhvnex
+- **LinkedIn:** https://www.linkedin.com/in/thinh-lam-a7b7361a7/
+- **Facebook:** https://www.facebook.com/tanthinhvnex/
 
 ---
 
-**Chúc bạn thành công với portfolio và freelance career!** 🚀
+**Built with ❤️ by Lam Tan Thinh** | 2025
