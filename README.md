@@ -7,7 +7,7 @@ Modern dark-themed portfolio website showcasing front-end development and HTML b
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-## 👨‍💻 About
+## About
 
 **Name:** Lam Tan Thinh
 **Role:** HTML Banner Designer & Front-End Developer
@@ -15,21 +15,21 @@ Modern dark-themed portfolio website showcasing front-end development and HTML b
 **Email:** tanthinhvnex@gmail.com
 **GitHub:** [@tanthinhvnex](https://github.com/tanthinhvnex)
 
-## ✨ Features
+## Features
 
 ### Design & UX
-- 🌙 **Dark Mode Theme** - Sleek dark interface with pastel blue accents
-- 🎨 **Animated Hero Banner** - Gradient orbs, floating shapes, morphing blobs, and particle effects
-- 💫 **Smooth Animations** - Fade-in effects, hover transitions, and scroll animations
-- 📱 **Fully Responsive** - Mobile-first design with hamburger menu
+- **Dark Mode Theme** - Sleek dark interface with pastel blue accents
+- **Animated Hero Banner** - Gradient orbs, floating shapes, morphing blobs, and particle effects
+- **Smooth Animations** - Fade-in effects, hover transitions, and scroll animations
+- **Fully Responsive** - Mobile-first design with hamburger menu
 
 ### Technical Features
-- ⚡ **Live Project Previews** - Embedded iframes showing real GitHub Pages
-- 🔗 **Direct Links** - Live Demo and GitHub repository buttons for each project
-- 🎯 **Performance Optimized** - Lazy loading iframes, CSS animations with GPU acceleration
-- 🎭 **Interactive Elements** - Hover effects, smooth scrolling, active link highlighting
+- **Live Project Previews** - Embedded iframes showing real GitHub Pages
+- **Direct Links** - Live Demo and GitHub repository buttons for each project
+- **Performance Optimized** - Lazy loading iframes, CSS animations with GPU acceleration
+- **Interactive Elements** - Hover effects, smooth scrolling, active link highlighting
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 fe-portfolio/
@@ -41,7 +41,7 @@ fe-portfolio/
 └── README.md           # This file
 ```
 
-## 🎨 Color Scheme
+## Color Scheme
 
 ```css
 /* Pastel Blue Theme */
@@ -55,7 +55,7 @@ fe-portfolio/
 --bg-card: #1c1c21;           /* Card Background */
 ```
 
-## 🚀 Featured Projects
+## Featured Projects
 
 ### Landing Pages (4 projects)
 1. **Real Estate Landing Page** - [Live](https://tanthinhvnex.github.io/landing-page-real-estate/) | [Code](https://github.com/tanthinhvnex/landing-page-real-estate)
@@ -67,7 +67,7 @@ fe-portfolio/
 - Web Application 1
 - Web Application 2
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5** - Semantic markup
 - **CSS3** - Grid, Flexbox, Animations, Custom Properties
@@ -75,7 +75,7 @@ fe-portfolio/
 - **Font Awesome 6.4.0** - Icons
 - **GitHub Pages** - Hosting
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 ### Local Development
 
@@ -111,7 +111,7 @@ fe-portfolio/
    - Save and wait 2-3 minutes
    - Visit: `https://[username].github.io`
 
-## ⚙️ Customization Guide
+## Customization Guide
 
 ### Update Personal Information
 
@@ -166,14 +166,14 @@ Edit CSS variables in `styles.css`:
 }
 ```
 
-## 🎯 Performance Features
+## Performance Features
 
 - **Lazy Loading** - iframes load only when scrolled into view
 - **CSS Animations** - Hardware-accelerated with `transform` and `opacity`
 - **Particle System** - Canvas-based with optimized rendering
 - **Responsive Images** - Proper sizing for different devices
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 ```css
 /* Mobile */
@@ -186,7 +186,7 @@ Edit CSS variables in `styles.css`:
 Default styles
 ```
 
-## 🎭 Animation Effects
+## Animation Effects
 
 ### Hero Banner
 - Gradient Orbs (3 layers)
@@ -201,7 +201,7 @@ Default styles
 - Fade-in on scroll (Intersection Observer)
 - Active link highlighting
 
-## 📝 To-Do List
+## To-Do List
 
 - [ ] Add 2 Full-Stack Web Application projects
 - [ ] Implement dark/light mode toggle (optional)
@@ -211,15 +211,15 @@ Default styles
 - [ ] Create blog section
 - [ ] Add testimonials section
 
-## 🤝 Contributing
+## Contributing
 
 This is a personal portfolio, but feel free to fork and customize for your own use!
 
-## 📄 License
+## License
 
 MIT License - Free to use for personal portfolios
 
-## 🔗 Links
+## Links
 
 - **Portfolio:** https://tanthinhvnex.github.io
 - **GitHub:** https://github.com/tanthinhvnex
@@ -228,4 +228,4 @@ MIT License - Free to use for personal portfolios
 
 ---
 
-**Built with ❤️ by Lam Tan Thinh** | 2025
+**Built with by Lam Tan Thinh** | 2025

@@ -29,6 +29,11 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(96, 165, 250, 0.06) 0%, transparent 30%),
+        radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 40%);
+    background-attachment: fixed;
 }
 
 .container {
@@ -191,6 +196,62 @@ body {
     }
 }
 
+/* Common section background effects */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(59, 130, 246, 0.05) 0%,
+        transparent 60%
+    );
+}
+
+.section-bg::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 10%;
+    right: -200px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.08) 40%, transparent 70%);
+    border-radius: 50%;
+    animation: floatSlow 25s ease-in-out infinite;
+}
+
+.section-bg::after {
+    content: '';
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    bottom: 5%;
+    left: -150px;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.18) 0%, rgba(96, 165, 250, 0.06) 40%, transparent 70%);
+    border-radius: 50%;
+    animation: floatSlow 30s ease-in-out infinite reverse;
+}
+
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(50px, -50px) scale(1.1);
+        opacity: 0.7;
+    }
+}
+
 @keyframes float {
     0%, 100% {
         transform: translate(0, 0) rotate(0deg);
@@ -270,7 +331,6 @@ body {
         0 0 65px rgba(59, 130, 246, 0.5),
         0 0 85px rgba(59, 130, 246, 0.3),
         0 0 110px rgba(37, 99, 235, 0.2);
-    animation: shineMove 3s ease-in-out infinite;
 }
 
 @keyframes gradientSlide {
@@ -449,6 +509,10 @@ section {
     gap: 2rem;
 }
 
+.landing-pages-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .project-card {
     background: var(--bg-card);
     border-radius: 15px;
@@ -489,6 +553,14 @@ section {
     width: 250%;
     height: 250%;
 }
+
+/* Dim bright projects for better dark mode viewing */
+.project-card.bright-theme iframe,
+.project-card.bright-theme .carousel-slide img {
+    opacity: 0.9;
+}
+
+/* Remove darker variant - use same as others */
 
 .project-card:hover .project-image img {
     transform: scale(1.1);
@@ -609,15 +681,14 @@ section {
 .project-carousel {
     position: relative;
     width: 100%;
-    height: 400px;
     background: var(--bg-light);
-    overflow: hidden;
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 400px;
+    overflow: hidden;
 }
 
 .carousel-slides {
@@ -688,13 +759,11 @@ section {
 }
 
 .carousel-indicators {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
+    justify-content: center;
     gap: 8px;
-    z-index: 10;
+    padding: 15px 0;
+    background: var(--bg-light);
 }
 
 .carousel-indicator {
@@ -721,6 +790,10 @@ section {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-note-single {
     margin-bottom: 1rem;
 }
 
@@ -757,7 +830,7 @@ section {
 
 .carousel-caption {
     position: absolute;
-    bottom: 50px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(10, 10, 15, 0.9);
@@ -768,7 +841,7 @@ section {
     font-weight: 500;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(96, 165, 250, 0.3);
-    z-index: 5;
+    z-index: 10;
     white-space: nowrap;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
@@ -780,7 +853,7 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -1017,7 +1090,7 @@ section {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .contact-content {
@@ -1030,6 +1103,10 @@ section {
     }
 
     .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .landing-pages-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -1050,5 +1127,9 @@ section {
     .btn {
         padding: 10px 25px;
         font-size: 0.9rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
