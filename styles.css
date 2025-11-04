@@ -1032,6 +1032,71 @@ section {
     transform: translateY(-3px);
 }
 
+/* Other Portfolios Section */
+.other-portfolios {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.03), rgba(59, 130, 246, 0.03));
+    border-top: 1px solid rgba(96, 165, 250, 0.1);
+    border-bottom: 1px solid rgba(96, 165, 250, 0.1);
+}
+
+.portfolio-switch-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(28, 28, 33, 0.5);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.portfolio-switch-content:hover {
+    border-color: rgba(96, 165, 250, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.15);
+}
+
+.portfolio-switch-text h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-switch-text p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.portfolio-switch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+}
+
+.portfolio-switch-btn:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+}
+
+.portfolio-switch-btn i:last-child {
+    transition: var(--transition);
+}
+
+.portfolio-switch-btn:hover i:last-child {
+    transform: translateX(5px);
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -1109,6 +1174,20 @@ section {
     .landing-pages-grid {
         grid-template-columns: 1fr;
     }
+
+    .portfolio-switch-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .portfolio-switch-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .portfolio-switch-text p {
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1131,5 +1210,22 @@ section {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-switch-content {
+        padding: 1rem;
+    }
+
+    .portfolio-switch-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-switch-text p {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-switch-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
